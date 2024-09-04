@@ -7,7 +7,11 @@ RemarkT = Union[str, "Remark"]
 
 
 class Remark(AmisNode):
-    """mark"""
+    """
+    Remark 标记
+
+    用于展示提示文本，和表单项中的 remark 属性类型。
+    """
 
     type: str = "remark"
     className: Optional[str] = None

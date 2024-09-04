@@ -3,7 +3,13 @@ from pydantic import SerializeAsAny
 from amis.types import *
 
 
+# https://baidu.github.io/amis/zh-CN/components/grid-2d
 class Grid2D(AmisNode):
+    """
+    Grid 2D 布局
+
+    Grid 2D 是一种二维布局方式，它可以更直观设置组件位置。
+    """
     class Grids(AmisNode):
         x: Optional[int] = None
         """格子起始位置的横坐标"""
@@ -35,4 +41,3 @@ class Grid2D(AmisNode):
     rowGap: Optional[Union[int, str]] = None
     """格子垂直间距"""
     grids: SerializeAsAny[Optional[List[SchemaNode]]] = None
-

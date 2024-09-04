@@ -2,8 +2,11 @@ from typing import Literal, Union, List, Optional
 from amis.types import AmisNode
 
 
+# https://baidu.github.io/amis/zh-CN/components/pagination#%E5%B1%9E%E6%80%A7%E8%A1%A8
 class Pagination(AmisNode):
-    """分页"""
+    """
+    Pagination 分页组件
+    """
     type: str = "pagination"
     """	指定为 Pagination 渲染器"""
     mode: Literal["simple", "normal"] = "normal"
@@ -24,7 +27,7 @@ class Pagination(AmisNode):
     """组件尺寸，支持md、sm设置，版本: 6.0.0后支持变量"""
     ellipsisPageGap: Union[int, str] = 5
     """多页跳转页数，页数较多出现...时点击省略号时每次前进/后退的页数，默认为5，版本: 6.0.0后支持变量"""
-    perPageAvailable: [List[int]] = [10, 20, 50, 100]
+    perPageAvailable: List[int] = [10, 20, 50, 100]
     """指定每页可以显示多少条"""
     showPageInput: bool = False
     """是否显示快速跳转输入框 layout 和 showPageInput 都可以控制"""

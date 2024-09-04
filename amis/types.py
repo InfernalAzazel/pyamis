@@ -15,10 +15,10 @@ class BaseAmisModel(BaseModel):
     model_config = ConfigDict(extra="allow")
 
     def to_json(self):
-        return self.json(exclude_none=True, by_alias=True)
+        return self.model_dump_json(exclude_none=True, by_alias=True)
 
     def to_dict(self):
-        return self.dict(exclude_none=True, by_alias=True)
+        return self.model_dump(exclude_none=True, by_alias=True)
 
     def update_from_dict(self, kwargs: Dict[str, Any]):
         for k, v in kwargs.items():

@@ -1,12 +1,13 @@
 from typing import Optional
 from pydantic import SerializeAsAny
-
 from amis.types import *
 
 
 # https://aisuda.bce.baidu.com/amis/zh-CN/components/collapse#collapse-%E5%B1%9E%E6%80%A7%E8%A1%A8
 class Collapse(AmisNode):
-    """折叠器组件"""
+    """
+    Collapse 折叠器
+    """
     type: str = 'collapse'
     """指定为 collapse 渲染器	"""
     disabled: bool = False
@@ -24,7 +25,9 @@ class Collapse(AmisNode):
 
 
 class CollapseGroup(AmisNode):
-    """折叠器群组件"""
+    """
+    CollapseGroup 折叠器群组件
+    """
 
     type: str = "collapse-group"
     """指定为 collapse-group 渲染器"""

@@ -1,11 +1,14 @@
-from typing import Optional
 from pydantic import SerializeAsAny
 from amis.function.action import *
 from amis.types import *
 
 
 class Panel(AmisNode):
-    """面板"""
+    """
+    Panel 面板
+
+    可以把相关信息以面板的形式展示到一块。
+    """
 
     type: str = "panel"
     """指定为 Panel 渲染器"""

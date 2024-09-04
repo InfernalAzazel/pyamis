@@ -2,8 +2,13 @@ from typing import Optional
 from amis.types import *
 
 
+# https://baidu.github.io/amis/zh-CN/components/container#%E5%B1%9E%E6%80%A7%E8%A1%A8
 class Container(AmisNode):
-    """容器组件"""
+    """
+    Container 是一种容器组件，它可以渲染其他 amis 组件。
+
+    - 注意 Container 组件因为历史原因多了一层 div，推荐使用 wrapper 来作为容器。
+    """
 
     type: str = 'container'
     """指定为 container 渲染器"""

@@ -1,12 +1,16 @@
 from typing import Optional
 from pydantic import SerializeAsAny
-from amis.data_display.icon import Icon
+from amis.data_display import Icon
 from amis.types import *
 
 
 # https://aisuda.bce.baidu.com/amis/zh-CN/components/portlet#%E5%B1%9E%E6%80%A7%E8%A1%A8
 class Portlet(AmisNode):
-    """门户栏目组件"""
+    """
+    Portlet 门户栏目
+
+    门户栏目组件
+    """
 
     class Item(AmisNode):
         title: Optional[str] = None

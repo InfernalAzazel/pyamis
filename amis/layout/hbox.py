@@ -1,12 +1,13 @@
 from typing import Optional
-
 from pydantic import SerializeAsAny
-
 from amis.types import *
 
 
+# https://baidu.github.io/amis/zh-CN/components/hbox#%E5%B1%9E%E6%80%A7%E8%A1%A8
 class HBox(AmisNode):
-    """HBox 布局"""
+    """
+    HBox 布局
+    """
 
     class Column(AmisNode):
         columnClassName: str = 'wrapper-xs'

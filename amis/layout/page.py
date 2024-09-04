@@ -1,10 +1,15 @@
 from pydantic import SerializeAsAny
-from amis.data_display.remark import *
+from amis.data_display import *
 from amis.types import *
 
 
 class Page(BasePage):
-    """页面组件"""
+    """
+    Page 页面
+
+    Page 组件是 amis 页面 JSON 配置中顶级容器组件，
+    是整个页面配置的入口组件。
+    """
 
     __default_template_path__: str = 'page.jinja2'
 

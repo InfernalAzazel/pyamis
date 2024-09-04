@@ -4,7 +4,11 @@ from amis.types import *
 
 
 class PaginationWrapper(AmisNode):
-    """分页容器"""
+    """
+    PaginationWrapper 分页容器
+
+    分页容器组件，可以用来对已有列表数据做分页处理。
+    """
     type: str = "pagination-wrapper"
     """指定为 Pagination-Wrapper 渲染器"""
     showPageInput: Optional[bool] = False

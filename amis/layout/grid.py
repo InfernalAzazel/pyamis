@@ -3,8 +3,12 @@ from pydantic import SerializeAsAny
 from amis.types import *
 
 
+# https://baidu.github.io/amis/zh-CN/components/grid#%E5%B1%9E%E6%80%A7%E8%A1%A8
+
 class Grid(AmisNode):
-    """水平分栏"""
+    """
+    Grid 水平分栏
+    """
 
     class Column(AmisNode):
         """列配置"""

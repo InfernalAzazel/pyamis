@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from fastapi.responses import HTMLResponse
 
-from pyamis.components import App
+from amis.function import App
 
 app = FastAPI()
 

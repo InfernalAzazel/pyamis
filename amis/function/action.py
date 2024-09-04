@@ -3,8 +3,12 @@ from amis.constants import *
 from amis.types import *
 
 
+# https://baidu.github.io/amis/zh-CN/components/action?page=1#%E9%80%9A%E7%94%A8%E5%B1%9E%E6%80%A7%E8%A1%A8
+
 class Action(AmisNode):
     """
+    Action 行为按钮
+
     Action 行为按钮，是触发页面行为的主要方法之一
     """
 

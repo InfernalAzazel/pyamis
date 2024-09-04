@@ -1,14 +1,17 @@
 from typing import Optional
-
 from pydantic import SerializeAsAny
-
 from amis.constants import *
-from amis.data_display.icon import Icon
+from amis.data_display import Icon
 from amis.types import *
 
 
+#  https://baidu.github.io/amis/zh-CN/components/tabs#%E5%B1%9E%E6%80%A7%E8%A1%A8
 class Tabs(AmisNode):
-    """选项卡"""
+    """
+    Tabs 选项卡
+
+    选项卡容器组件
+    """
 
     class Item(AmisNode):
         title: Optional[Union[str, SchemaNode]] = None
@@ -84,4 +87,3 @@ class Tabs(AmisNode):
     """用来设置折叠按钮的文字"""
     swipeable: bool = False
     """是否开启手势滑动切换（移动端生效）"""
-
