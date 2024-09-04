@@ -7,7 +7,7 @@
 <h2 align="center"> pyamis </h2>
 <p align="center">
     <em>amis is a low-code front-end framework that uses JSON configuration to generate pages, which can reduce the workload of page development and greatly improve efficiency</em><br/>
-    <em>pyamis is based on Baidu's open-source AMIS for Python encapsulation</em>
+    <em>pyamis is based on Baidu's open-source amis for Python encapsulation</em>
 </p>
 
 ------
