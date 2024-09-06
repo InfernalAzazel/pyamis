@@ -1,16 +1,13 @@
 from typing import Optional
 from amis.types import *
 
-# https://aisuda.bce.baidu.com/amis/zh-CN/components/remark#%E5%B1%9E%E6%80%A7%E8%A1%A8
-
-RemarkT = Union[str, "Remark"]
-
-
 class Remark(AmisNode):
     """
     Remark 标记
 
     用于展示提示文本，和表单项中的 remark 属性类型。
+
+    参考：https://aisuda.bce.baidu.com/amis/zh-CN/components/remark#%E5%B1%9E%E6%80%A7%E8%A1%A8
     """
 
     type: str = "remark"
@@ -26,3 +23,6 @@ class Remark(AmisNode):
     """图标: fa fa-question-circle"""
     shape: Optional[str] = None
     """	图标形状"""
+
+
+RemarkT = Union[str, Remark]

@@ -2,15 +2,15 @@ from typing import Optional
 from amis.types import *
 
 
-# https://aisuda.bce.baidu.com/amis/zh-CN/components/icon#%E4%BA%8B%E4%BB%B6%E8%A1%A8
-
 class Icon(AmisNode):
     """
     Icon 图标
 
     在 React 项目中使用 Icon 需要引入 @fortawesome/fontawesome-free，
     然后在代码中 import '@fortawesome/fontawesome-free/css/all.css'，
-    还有相关的 webpack 配置，具体请参考 amis-react-starter 里的配置
+    还有相关的 webpack 配置，具体请参考 amis-react-starter 里的配置。
+
+    参考： https://aisuda.bce.baidu.com/amis/zh-CN/components/icon#%E4%BA%8B%E4%BB%B6%E8%A1%A8
     """
 
     type: str = "icon"

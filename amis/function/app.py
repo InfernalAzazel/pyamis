@@ -1,9 +1,10 @@
 from pydantic import SerializeAsAny, Field
 
-from amis.data_display import Iframe
-from amis.layout import Page
+from amis.data_display.iframe import Iframe
+from amis.layout.page import Page
 from typing import Optional
 from amis.types import *
+
 
 # https://baidu.github.io/amis/zh-CN/components/app#%E5%B1%9E%E6%80%A7%E8%AF%B4%E6%98%8E
 
@@ -16,7 +17,7 @@ class PageSchema(AmisNode):
     """菜单图标，比如：fa fa-file."""
     url: Optional[str] = None
     """页面路由路径，当路由命中该路径时，启用当前页面。当路径不是 / 打头时，会连接父级路径。比如：父级的路径为"""
-    schema_: SerializeAsAny[Union[Page, "Iframe"]] = Field(None, alias="schema")
+    schema_: SerializeAsAny[Union["Page", "Iframe"]] = Field(None, alias="schema")
     """页面的配置，具体配置请前往 Page 页面说明"""
     schemaApi: Optional[API] = None
     """如果想通过接口拉取，请配置。返回路径为 json>data。schema 和 schemaApi 只能二选一"""
@@ -35,7 +36,8 @@ class PageSchema(AmisNode):
     children: SerializeAsAny[Optional[List["PageSchema"]]] = None
     """子菜单"""
 
-class App(Page):
+
+class App(BasePage):
     """
     App 多页应用
 
@@ -67,3 +69,6 @@ class App(Page):
     数组第一层为分组，一般只需要配置 label 集合，如果你不想分组，
     直接不配置，真正的页面请在第二层开始配置，即第一层的 children 中
     """
+
+
+

@@ -5,6 +5,7 @@ from jinja2 import Environment, FileSystemLoader
 from pydantic import BaseModel, ConfigDict
 
 Expression = str
+DataMapping = str
 Template = Union[str, "Tpl", dict]
 SchemaNode = Union[Template, "AmisNode", List["AmisNode"], dict]
 OptionsNode = Union[List[dict], List[str]]

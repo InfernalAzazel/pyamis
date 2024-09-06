@@ -1,6 +1,9 @@
+from pydantic import SerializeAsAny
 from amis.constants import *
-from amis.data_display import *
-from amis.function import Action
+from amis.data_display.remark import *
+from amis.data_display.table import TableColumn
+from amis.data_display.table2 import TableColumn2
+from amis.function.action import Action
 from amis.types import *
 
 class Form(AmisNode):
@@ -240,7 +243,7 @@ class FormItem(AmisNode):
         """showSuggestion 为 true 时，参照录入 mode 为 popOver 时，可配置弹出位置"""
         size: Optional[str] = None
         """showSuggestion 为 true 时，参照录入 mode 为 dialog 时，可设置大小"""
-        columns: SerializeAsAny[Optional[List["TableColumn"]]] = None
+        columns: SerializeAsAny[Optional[List[Union["TableColumn", "TableColumn2"]]]] = None
         """showSuggestion 为 true 时，数据展示列配置"""
         filter: SerializeAsAny[Optional[SchemaNode]] = None
         """showSuggestion 为 true 时，数据查询过滤条件"""

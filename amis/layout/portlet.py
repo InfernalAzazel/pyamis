@@ -1,6 +1,6 @@
 from typing import Optional
 from pydantic import SerializeAsAny
-from amis.data_display import Icon
+from amis.data_display.icon import Icon
 from amis.types import *
 
 

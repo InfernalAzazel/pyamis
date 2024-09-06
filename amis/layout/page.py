@@ -1,5 +1,5 @@
 from pydantic import SerializeAsAny
-from amis.data_display import *
+from amis.data_display.remark import *
 from amis.types import *
 
 
@@ -61,3 +61,6 @@ class Page(BasePage):
     """通过表达式来配置停止刷新的条件"""
     pullRefresh: Any = {'disabled': True}
     """下拉刷新配置（仅用于移动端）"""
+
+
+Page.update_forward_refs()

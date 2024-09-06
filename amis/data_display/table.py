@@ -1,5 +1,5 @@
-from amis.data_display import *
-from amis.function import Action
+from amis.data_display.remark import *
+from amis.function.action import Action
 from amis.other import Badge
 from amis.types import *
 from pydantic import SerializeAsAny
@@ -20,7 +20,7 @@ class Table(AmisNode):
 
     type: str = "table"
     """"type" 指定为 table 渲染器"""
-    title: Optional[Optional[str]] = None
+    title: Optional[str] = None
     """标题"""
     source: Optional[str] = None
     """

@@ -1,13 +1,13 @@
 from typing import Optional
 from amis.types import *
 
-# https://baidu.github.io/amis/zh-CN/components/iframe#%E5%B1%9E%E6%80%A7%E8%A1%A8
-
 class Iframe(AmisNode):
     """
     Iframe
 
     内嵌外部站点，可用 iframe 来实现。
+
+    参考：https://baidu.github.io/amis/zh-CN/components/iframe#%E5%B1%9E%E6%80%A7%E8%A1%A8
     """
 
     type: str = "iframe"
@@ -26,7 +26,13 @@ class Iframe(AmisNode):
     """sandbox 配置"""
     referrerpolicy: Optional[str] = None
     """referrerpolicy 配置"""
-    height: Union[int, str] = '100%'
-    """iframe 高度"""
-    width: Union[int, str] = '100%'
-    """iframe 宽度"""
+    height: Optional[Union[int, str]] = None
+    """
+    - iframe 高度
+    - 默认值：100%
+    """
+    width: Optional[Union[int, str]] = None
+    """
+    - iframe 宽度
+    - 默认值：100%
+    """

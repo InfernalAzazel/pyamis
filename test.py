@@ -1,5 +1,5 @@
-from amis.layout import Page
-from amis.function import App
+from amis.layout.page import Page
+from amis.function.app import App
 
 
 page = Page()
