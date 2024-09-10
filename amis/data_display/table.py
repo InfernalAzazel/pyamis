@@ -1,5 +1,6 @@
 from amis.data_display.remark import *
 from amis.function.action import Action
+from amis.function.popover import PopOver
 from amis.other import Badge
 from amis.types import *
 from pydantic import SerializeAsAny
@@ -147,7 +148,7 @@ class TableColumn(AmisNode):
     """提示消息"""
     fixed: Optional[Literal['left','right']] = None
     """是否修复当前列"""
-    popOver: Optional[Union[bool, dict]] = None
+    popOver: SerializeAsAny[Optional[Union[str, 'PopOver']]] = None
     """弹出框"""
     copyable: Optional[Union[bool, dict]] = None
     """
