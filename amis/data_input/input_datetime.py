@@ -1,50 +1,45 @@
-from typing import Optional
+from typing import Optional, Union
+
 from amis.data_input import FormItem
-from amis.types import *
 
 
-class InputDate(FormItem):
+class InputDatetime(FormItem):
     """
-    InputDate 日期
+    InputDatetime 日期时间
 
-    参考：https://aisuda.bce.baidu.com/amis/zh-CN/components/form/input-date#%E5%B1%9E%E6%80%A7%E8%A1%A8
+    参考：https://aisuda.bce.baidu.com/amis/zh-CN/components/form/input-datetime#%E5%B1%9E%E6%80%A7%E8%A1%A8
     """
 
-    type: str = "input-date"
-    """指明为 input-date 组件"""
+    type: str = "input-datetime"
+    """指明为 input-datetime 组件"""
     value: Optional[str] = None
     """默认值"""
     valueFormat: Optional[str] = None
     """
-    - 日期选择器值格式，更多格式类型请参考 文档
+    - 日期时间选择器值格式，更多格式类型请参考 文档
     - 默认值：'X'
     - 版本：3.4.0 版本后支持
     """
     displayFormat: Optional[str] = None
     """
-    - 日期选择器显示格式，即时间戳格式，更多格式类型请参考 文档
-    - 默认值：'YYYY-MM-DD'
+    - 日期时间选择器显示格式，即时间戳格式，更多格式类型请参考 文档
+    - 默认值：'YYYY-MM-DD HH:mm:ss'
     - 版本：3.4.0 版本后支持
-    """
-    closeOnSelect: Optional[bool] = None
-    """
-    - 点选日期后，是否马上关闭选择框
-    - 默认值：false
     """
     placeholder: Optional[str] = None
     """
     - 占位文本
-    - 默认值：'请选择日期'
+    - 默认值：'请选择日期以及时间'
     """
     shortcuts: Optional[Union[str, list[str], list[dict]]] = None
     """
-    - 日期快捷键，字符串格式为预设值，对象格式支持写表达式
+    - 日期时间快捷键
     - 版本：3.1.0 版本后支持表达式
     """
     minDate: Optional[str] = None
-    """限制最小日期"""
+    """限制最小日期时间"""
     maxDate: Optional[str] = None
-    """限制最大日期"""
+    """限制最大日期时间"""
     utc: Optional[bool] = None
     """
     - 保存 utc 值
@@ -57,7 +52,17 @@ class InputDate(FormItem):
     """
     embed: Optional[bool] = None
     """
-    - 是否内联模式
+    - 是否内联
+    - 默认值：false
+    """
+    timeConstraints: Optional[dict] = None
+    """
+    - 请参考 input-time 里的说明
+    - 默认值：true
+    """
+    isEndDate: Optional[dict] = None
+    """
+    - 如果配置为 true，会自动默认为 23:59:59 秒
     - 默认值：false
     """
     disabledDate: Optional[str] = None
@@ -65,13 +70,5 @@ class InputDate(FormItem):
     popOverContainerSelector: Optional[str] = None
     """
     - 弹层挂载位置选择器，会通过querySelector获取
-    - 版本：6.4.0 版本后支持表达式
+    - 版本：6.4.0 版本后支持
     """
-    name: Optional[str] = None
-    """名称"""
-    description: Optional[str] = None
-    """描述"""
-    format: Optional[str] = None
-    """格式"""
-    inputFormat: Optional[str] = None
-    """输入格式"""

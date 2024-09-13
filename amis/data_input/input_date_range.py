@@ -1,36 +1,32 @@
 from typing import Optional, Union
-
 from amis.data_input import FormItem
 
 
-class InputDatetime(FormItem):
+class InputDateRange(FormItem):
     """
-    InputDatetime 日期时间
+    InputDateRange 日期范围
 
-    参考：https://aisuda.bce.baidu.com/amis/zh-CN/components/form/input-datetime#%E5%B1%9E%E6%80%A7%E8%A1%A8
+    参考：https://aisuda.bce.baidu.com/amis/zh-CN/components/form/input-date-range#%E5%B1%9E%E6%80%A7%E8%A1%A8
     """
 
-    type: str = "input-datetime"
-    """指明为 input-datetime 组件"""
-    value: Optional[str] = None
-    """默认值"""
+    type: str = "input-date-range"
+    """指明为 input-date-range 组件"""
     valueFormat: Optional[str] = None
     """
-    - 日期时间选择器值格式，更多格式类型请参考 文档
+    - 日期选择器值格式
     - 默认值：'X'
     - 版本：3.4.0 版本后支持
     """
     displayFormat: Optional[str] = None
     """
     - 日期时间选择器显示格式，即时间戳格式，更多格式类型请参考 文档
-    - 默认值：YYYY-MM-DD HH:mm:ss
+    - 默认值：'YYYY-MM-DD'
     - 版本：3.4.0 版本后支持
     """
     placeholder: Optional[str] = None
     """
     - 占位文本
-    - 默认值：'请选择日期以及时间'
-    - 版本：3.4.0 版本后支持
+    - 默认值：'请选择日期范围'
     """
     shortcuts: Optional[Union[str, list[str], list[dict]]] = None
     """
@@ -41,6 +37,10 @@ class InputDatetime(FormItem):
     """限制最小日期时间"""
     maxDate: Optional[str] = None
     """限制最大日期时间"""
+    minDuration: Optional[str] = None
+    """限制最小跨度，如： 2days"""
+    maxDuration: Optional[str] = None
+    """限制最大跨度，如：1year"""
     utc: Optional[bool] = None
     """
     - 保存 utc 值
@@ -56,18 +56,22 @@ class InputDatetime(FormItem):
     - 是否内联
     - 默认值：false
     """
-    timeConstraints: Optional[dict] = None
+    animation: Optional[bool] = None
     """
-    - 请参考 input-time 里的说明
-    - 默认值：true
-    """
-    isEndDate: Optional[dict] = None
-    """
-    - 如果配置为 true，会自动默认为 23:59:59 秒
+    - 是否启用游标动画
     - 默认值：false
+    - 版本：2.2.0
     """
-    disabledDate: Optional[str] = None
-    """用字符函数来控制哪些天不可以被点选"""
+    extraName: Optional[str] = None
+    """
+    - 是否存成两个字段
+    - 版本：3.3.0
+    """
+    transform: Optional[str] = None
+    """
+    - 日期数据处理函数，用来处理选择日期之后的的值，返回值为 Moment对象
+    - 版本：3.5.0
+    """
     popOverContainerSelector: Optional[str] = None
     """
     - 弹层挂载位置选择器，会通过querySelector获取
