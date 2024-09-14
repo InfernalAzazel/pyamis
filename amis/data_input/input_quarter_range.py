@@ -1,5 +1,4 @@
 from typing import Optional
-
 from amis.data_input.form_item import AFormItem
 
 

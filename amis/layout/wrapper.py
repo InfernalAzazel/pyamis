@@ -1,5 +1,3 @@
-from typing import Optional
-from pydantic import SerializeAsAny
 from amis.constants import SizeEnum
 from amis.types import *
 
@@ -14,11 +12,15 @@ class AWrapper(AmisNode):
     """
     type: str = "wrapper"
     """指定为 Wrapper 渲染器"""
+
     className: Optional[str] = None
     """外层 Dom 的类名"""
+
     size: Union[str, SizeEnum, None] = None
     """支持: xs、sm、md 和 lg"""
+
     style: Union[str, dict, None] = None
     """自定义样式"""
+
     body: SerializeAsAny[Optional[SchemaNode]] = None
     """内容容器"""

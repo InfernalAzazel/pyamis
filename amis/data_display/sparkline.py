@@ -1,4 +1,3 @@
-from pydantic import SerializeAsAny
 from amis.function.action import *
 from amis.types import *
 

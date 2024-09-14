@@ -1,4 +1,3 @@
-from typing import Optional
 from amis.types import *
 
 
@@ -13,29 +12,37 @@ class ACustom(AmisNode):
 
     type: str = "custom"
     """指定为 custom 渲染器"""
+
     id: Optional[str] = None
     """节点 id"""
+
     name: Optional[str] = None
     """节点 名称"""
+
     className: Optional[str] = None
     """节点 class"""
+
     inline: bool = False
     """
     - 默认使用 div 标签，如果 true 就使用 span 标签
     - 默认值：false
     """
+
     html: Optional[str] = None
     """初始化节点 html"""
+
     onMount: Optional[str] = None
     """
     - 节点初始化之后调的用函数
     - 默认值：Function
     """
+
     onUpdate: Optional[str] = None
     """
     - 数据有更新的时候调用的函数
     - 默认值：Function
     """
+
     onUnmount: Optional[str] = None
     """
     - 节点销毁的时候调用的函数

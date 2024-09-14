@@ -1,5 +1,4 @@
-from typing import Optional, List, Dict, Any, Literal
-from amis.types import AmisNode
+from amis.types import *
 
 
 class AJSONSchemaEditor(AmisNode):

@@ -1,5 +1,3 @@
-from typing import Optional
-from pydantic import SerializeAsAny
 from amis.data_display.image import AImageAction
 from amis.types import *
 

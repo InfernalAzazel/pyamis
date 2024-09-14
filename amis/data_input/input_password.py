@@ -1,5 +1,4 @@
 from typing import Optional
-
 from amis.data_input.input_text import AInputText
 
 

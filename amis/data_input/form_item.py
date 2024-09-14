@@ -1,5 +1,3 @@
-from typing import Optional
-from pydantic import SerializeAsAny
 from amis.data_display.remark import ARemarkT
 from amis.data_display.table import ATableColumn
 from amis.data_display.table2 import ATableColumn2

@@ -1,5 +1,3 @@
-from typing import Optional
-from pydantic import SerializeAsAny
 from amis.function.action import AAction
 from amis.other import ABadge
 from amis.types import *

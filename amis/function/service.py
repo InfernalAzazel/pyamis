@@ -1,6 +1,3 @@
-from typing import Optional
-from pydantic import SerializeAsAny
-
 from amis.types import *
 
 
@@ -21,8 +18,10 @@ class AService(AmisNode):
     """
 
     class Messages(AmisNode):
+
         fetchSuccess: Optional[str] = None
         """接口请求成功时的 toast 提示文字"""
+
         fetchFailed: Optional[str] = None
         """
         - 接口请求失败时 toast 提示文字
@@ -31,39 +30,52 @@ class AService(AmisNode):
 
     type: str = "service"
     """指定为 service 渲染器	"""
+
     className: Optional[str] = None
     """外层 Dom 的类名"""
+
     body: SerializeAsAny[Optional[SchemaNode]] = None
     """内容容器"""
+
     api: Optional[API] = None
     """初始化数据域接口地址	"""
+
     ws: Optional[Union[str, dict]] = None
     """WebScocket 地址"""
+
     dataProvider: Optional[Union[str, dict]] = None
     """
     - 数据获取函数
     - 版本：1.4.0, 1.8.0 支持env参数，2.3.0 支持基于事件触发
     """
+
     initFetch: Optional[bool] = None
     """
     - 是否默认拉取
     - 默认值：false
     """
+
     schemaApi: Optional[API] = None
     """用来获取远程 Schema 接口地址"""
+
     initFetchSchema: Optional[bool] = None
     """是否默认拉取 Schema"""
+
     messages: Optional[Messages] = None
     """消息提示覆写，默认消息读取的是接口返回的 toast 提示文字，但是在此可以覆写它。"""
+
     interval: Optional[int] = None
     """轮询时间间隔，单位 ms(最低 1000)"""
+
     silentPolling: Optional[bool] = None
     """
     - 配置轮询时是否显示加载动画
     - 默认值：false
     """
+
     stopAutoRefreshWhen: Optional[Expression] = None
     """配置停止轮询的条件"""
+
     showErrorMsg: Optional[bool] = None
     """
     - 是否以 Alert 的形式显示 api 接口响应的错误信息，默认展示

@@ -1,4 +1,3 @@
-from pydantic import SerializeAsAny
 from amis.data_display.remark import *
 from amis.function.action import AAction
 from amis.other import ABadge

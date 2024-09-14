@@ -1,6 +1,5 @@
-from typing import Optional
 from amis.data_input.form_item import AFormItem
-from amis.types import OptionsNode, API
+from amis.types import *
 
 
 class AListSelect(AFormItem):

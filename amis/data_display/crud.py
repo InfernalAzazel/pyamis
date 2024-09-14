@@ -1,5 +1,3 @@
-from typing import Optional
-from pydantic import SerializeAsAny
 from amis.data_input.form import AForm
 from amis.function.action import AAction
 from amis.types import *

@@ -1,6 +1,3 @@
-from pydantic import SerializeAsAny
-from amis.constants import *
-from amis.data_display.remark import *
 from amis.data_input.form_item import AFormItem
 from amis.function.action import AAction
 from amis.types import *
@@ -42,10 +39,10 @@ class AForm(AmisNode):
     name: Optional[str] = None
     """设置一个名字后，方便其他组件与其通信"""
 
-    mode: Optional[DisplayModeEnum] = None
-    """表单展示方式，可以是：normal、horizontal 或者 inline"""
+    mode: Optional[Literal['normal', 'horizontal', 'inline']] = None
+    """表单展示方式"""
 
-    horizontal: Optional["Horizontal"] = None
+    horizontal: SerializeAsAny[Optional["Horizontal"]] = None
     """
     - 当 mode 为 horizontal 时有用，用来控制 label 的展示占比
     - 默认值: '{"left":2, "right":10, "justify": false}'"""

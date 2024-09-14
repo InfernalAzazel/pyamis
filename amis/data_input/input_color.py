@@ -1,6 +1,5 @@
-from typing import Optional, Literal
 from amis.data_input.form_item import AFormItem
-from amis.types import AmisNode
+from amis.types import *
 
 
 class AInputColor(AFormItem):

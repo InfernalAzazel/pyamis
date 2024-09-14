@@ -1,4 +1,3 @@
-from typing import Optional
 from amis.data_display.card import ACard
 from amis.types import *
 
