@@ -1,8 +1,7 @@
 from pathlib import Path
-from typing import Dict, Any, Union, List, Literal
-
+from typing import Dict, Any, Union, List, Literal, Optional
 from jinja2 import Environment, FileSystemLoader
-from pydantic import BaseModel, ConfigDict
+from pydantic import BaseModel, ConfigDict, SerializeAsAny
 
 Expression = str
 DataMapping = str
@@ -122,12 +121,14 @@ class AmisAPI(BaseAmisModel):
 
 class Tpl(AmisNode):
     type: str = "tpl"
-    """指定为 Tpl 组件"""
-    tpl: Template = None
-    """配置模板"""
-    className: str = None
+
+    className: Optional[str] = None
     """外层 Dom 的类名"""
-    showNativeTitle: bool = None
+
+    tpl: SerializeAsAny[Optional[Template]] = None
+    """配置模板"""
+
+    showNativeTitle: Optional[bool] = None
     """是否设置外层 DOM 节点的 title 属性为文本内容"""
 
 

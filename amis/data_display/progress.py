@@ -2,7 +2,7 @@ from typing import Optional
 from amis.types import *
 
 
-class Progress(AmisNode):
+class AProgress(AmisNode):
     """
     Progress 进度条
 
