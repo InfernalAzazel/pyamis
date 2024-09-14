@@ -3,7 +3,7 @@ from pydantic import SerializeAsAny
 from amis.types import *
 
 
-class PaginationWrapper(AmisNode):
+class APaginationWrapper(AmisNode):
     """
     PaginationWrapper 分页容器
 

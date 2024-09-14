@@ -2,7 +2,7 @@ from typing import Optional
 from amis.types import *
 
 
-class Button(AmisNode):
+class AButton(AmisNode):
     """
     Button 按钮
 

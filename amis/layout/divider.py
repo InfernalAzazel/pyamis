@@ -3,7 +3,7 @@ from amis.types import *
 
 
 # https://aisuda.bce.baidu.com/amis/zh-CN/components/divider#%E5%B1%9E%E6%80%A7%E8%A1%A8
-class Divider(AmisNode):
+class ADivider(AmisNode):
     """
     Divider 分割线
     """

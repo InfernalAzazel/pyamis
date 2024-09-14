@@ -4,7 +4,7 @@ from pydantic import SerializeAsAny
 from amis.types import *
 
 
-class Service(AmisNode):
+class AService(AmisNode):
     """
     Service 功能型容器
 

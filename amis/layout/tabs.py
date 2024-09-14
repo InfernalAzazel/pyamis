@@ -1,12 +1,12 @@
 from typing import Optional
 from pydantic import SerializeAsAny
 from amis.constants import *
-from amis.data_display.icon import Icon
+from amis.data_display.icon import AIcon
 from amis.types import *
 
 
 #  https://baidu.github.io/amis/zh-CN/components/tabs#%E5%B1%9E%E6%80%A7%E8%A1%A8
-class Tabs(AmisNode):
+class ATabs(AmisNode):
     """
     Tabs 选项卡
 
@@ -16,7 +16,7 @@ class Tabs(AmisNode):
     class Item(AmisNode):
         title: Optional[Union[str, SchemaNode]] = None
         """Tab 标题，当是 SchemaNode 时，该 title 不支持 editable 为 true 的双击编辑"""
-        icon: Union[str, "Icon", None] = None
+        icon: Union[str, "AIcon", None] = None
         """Tab 的图标"""
         iconPosition: Literal['left', 'right'] = 'left'
         """Tab 的图标位置"""

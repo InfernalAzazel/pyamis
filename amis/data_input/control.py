@@ -2,7 +2,7 @@ from typing import Optional
 from amis.types import *
 
 
-class Control(AmisNode):
+class AControl(AmisNode):
     """
     Control 表单项包裹
 
@@ -10,9 +10,12 @@ class Control(AmisNode):
     """
     type: str =  'control'
     """指定 control 渲染器"""
+
     label: Optional[str] = None
     """标签"""
+
     description: Optional[str] = None
     """描述"""
+
     body: Optional[Union[str, dict, list]] = None
     """内容容器"""

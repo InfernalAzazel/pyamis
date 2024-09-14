@@ -1,9 +1,9 @@
 from pydantic import SerializeAsAny
-from amis.function.action import Action
+from amis.function.action import AAction
 from amis.types import *
 
 
-class ButtonToolbar(AmisNode):
+class AButtonToolbar(AmisNode):
     """
     Button-Toolbar 按钮工具栏
 
@@ -12,5 +12,6 @@ class ButtonToolbar(AmisNode):
 
     type: str = "button-toolbar"
     """指定为 ButtonToolbar 组件"""
-    buttons: SerializeAsAny[List[Action]]
+
+    buttons: SerializeAsAny[List[AAction]]
     """按钮组"""

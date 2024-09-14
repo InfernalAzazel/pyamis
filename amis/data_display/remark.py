@@ -1,7 +1,7 @@
 from typing import Optional
 from amis.types import *
 
-class Remark(AmisNode):
+class ARemark(AmisNode):
     """
     Remark 标记
 
@@ -11,18 +11,24 @@ class Remark(AmisNode):
     """
 
     type: str = "remark"
+
     className: Optional[str] = None
     """外层 CSS 类名"""
+
     content: Optional[str] = None
     """提示文本"""
+
     placement: Optional[str] = None
     """弹出位置"""
+
     trigger: Optional[str] = None
     """触发条件, 默认: ['hover', 'focus']"""
+
     icon: Optional[str] = None
     """图标: fa fa-question-circle"""
+
     shape: Optional[str] = None
     """	图标形状"""
 
 
-RemarkT = Union[str, Remark]
+ARemarkT = Union[str, ARemark]

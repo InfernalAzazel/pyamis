@@ -1,10 +1,10 @@
 from typing import Optional
 from pydantic import SerializeAsAny
-from amis.data_input import FormItem
+from amis.data_input.form_item import AFormItem
 from amis.types import *
 
 
-class InputArray(FormItem):
+class AInputArray(AFormItem):
     """
     InputArray 数组输入框
 
@@ -15,7 +15,7 @@ class InputArray(FormItem):
 
     type: str = "input-array"
     """指明为array组件"""
-    items: SerializeAsAny[Optional[Union[FormItem, SchemaNode]]] = None
+    items: SerializeAsAny[Optional[Union[AFormItem, SchemaNode]]] = None
     """配置单项表单类型"""
     addable: Optional[bool] = None
     """是否可新增"""

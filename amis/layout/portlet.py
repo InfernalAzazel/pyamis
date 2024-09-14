@@ -1,11 +1,11 @@
 from typing import Optional
 from pydantic import SerializeAsAny
-from amis.data_display.icon import Icon
+from amis.data_display.icon import AIcon
 from amis.types import *
 
 
 # https://aisuda.bce.baidu.com/amis/zh-CN/components/portlet#%E5%B1%9E%E6%80%A7%E8%A1%A8
-class Portlet(AmisNode):
+class APortlet(AmisNode):
     """
     Portlet 门户栏目
 
@@ -15,7 +15,7 @@ class Portlet(AmisNode):
     class Item(AmisNode):
         title: Optional[str] = None
         """	Tab 标题"""
-        icon: Union[str, "Icon", None] = None
+        icon: Union[str, "AIcon", None] = None
         """Tab 的图标"""
         tab: SerializeAsAny[Optional[SchemaNode]] = None
         """内容区"""

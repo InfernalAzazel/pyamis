@@ -1,5 +1,5 @@
 from typing import Optional
-from amis.data_input import FormItem
+from amis.data_input.form_item import AFormItem
 from amis.types import *
 
 
@@ -21,7 +21,7 @@ class Group(AmisNode):
     label: Optional[str] = None
     """group 的标签"""
 
-    body: Optional[List['FormItem']] = None
+    body: Optional[List['AFormItem']] = None
     """表单项集合"""
 
     mode: Optional[str] = None

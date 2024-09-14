@@ -1,7 +1,7 @@
 from typing import Optional
 from amis.types import *
 
-class Iframe(AmisNode):
+class AIframe(AmisNode):
     """
     Iframe
 
@@ -12,25 +12,34 @@ class Iframe(AmisNode):
 
     type: str = "iframe"
     """指定为 iFrame 渲染器"""
+
     className: Optional[str] = None
     """iFrame 的类名"""
+
     frameBorder: Optional[list] = None
     """frameBorder"""
+
     style: Optional[dict] = None
     """样式对象"""
+
     src: Optional[str] = None
     """iframe 地址"""
+
     allow: Optional[str] = None
     """	allow 配置"""
+
     sandbox: Optional[str] = None
     """sandbox 配置"""
+
     referrerpolicy: Optional[str] = None
     """referrerpolicy 配置"""
+
     height: Optional[Union[int, str]] = None
     """
     - iframe 高度
     - 默认值：100%
     """
+
     width: Optional[Union[int, str]] = None
     """
     - iframe 宽度

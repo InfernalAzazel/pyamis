@@ -1,9 +1,9 @@
 from typing import Optional
-from amis.data_display.card import Card
+from amis.data_display.card import ACard
 from amis.types import *
 
 
-class Cards(AmisNode):
+class ACards(AmisNode):
     """
     Cards 卡片组
 
@@ -19,46 +19,57 @@ class Cards(AmisNode):
 
     type: str = "cards"
     """cards 指定为卡片组"""
+
     title: Optional[Optional[str]] = None
     """标题"""
+
     source: Optional[DataMapping] = None
     """
     - 数据源, 获取当前数据域中的变量
     - 默认值：${items}
     """
+
     placeholder: Optional[str] = None
     """
     - 当没数据的时候的文字提示
     - 默认值：'暂无数据'
     """
+
     className: Optional[str] = None
     """外层 CSS 类名"""
+
     headerClassName: Optional[str] = None
     """
     - 顶部外层 CSS 类名
     - 默认值：'amis-grid-header'
     """
+
     footerClassName: Optional[str] = None
     """
     - 底部外层 CSS 类名
     - 默认值：'amis-grid-footer'
     """
+
     itemClassName: Optional[str] = None
     """
     - 卡片 CSS 类名
     - 默认值：'col-sm-4 col-md-3'
     """
-    card: Optional[Card] = None
+
+    card: Optional[ACard] = None
     """配置卡片信息"""
+
     selectable: Optional[bool] = None
     """
     - 卡片组是否可选
     - 默认值：false
     """
+
     multiple: Optional[bool] = None
     """
     - 卡片组是否为多选
     - 默认值：true
     """
+
     checkOnItemClick: Optional[bool] = None
     """点选卡片内容是否选中卡片"""

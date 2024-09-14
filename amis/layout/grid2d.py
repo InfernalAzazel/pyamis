@@ -4,7 +4,7 @@ from amis.types import *
 
 
 # https://baidu.github.io/amis/zh-CN/components/grid-2d
-class Grid2D(AmisNode):
+class AGrid2D(AmisNode):
     """
     Grid 2D 布局
 

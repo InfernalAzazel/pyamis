@@ -3,7 +3,7 @@ from pydantic import SerializeAsAny
 from amis.types import *
 
 
-class Breadcrumb(AmisNode):
+class ABreadcrumb(AmisNode):
     """
     Breadcrumb 面包屑
 

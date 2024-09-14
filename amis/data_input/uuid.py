@@ -1,9 +1,8 @@
 from typing import Optional
-
 from amis.types import *
 
 
-class UUID(AmisNode):
+class AUUID(AmisNode):
     """
     UUID 字段
 

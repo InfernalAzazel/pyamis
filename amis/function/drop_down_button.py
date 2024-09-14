@@ -1,6 +1,6 @@
 from typing import Optional
 from pydantic import SerializeAsAny
-from amis.function.button import Button
+from amis.function.button import AButton
 from amis.types import *
 
 
@@ -27,7 +27,7 @@ class DropDownButton(AmisNode):
     """尺寸"""
     align: Optional[Literal["left", "right"]] = None
     """位置"""
-    buttons: SerializeAsAny[List[Button]] = None
+    buttons: SerializeAsAny[List[AButton]] = None
     """配置下拉按钮"""
     iconOnly: Optional[bool] = None
     """只显示 icon"""

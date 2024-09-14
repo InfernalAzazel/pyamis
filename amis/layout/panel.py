@@ -3,7 +3,7 @@ from amis.function.action import *
 from amis.types import *
 
 
-class Panel(AmisNode):
+class APanel(AmisNode):
     """
     Panel 面板
 
@@ -32,5 +32,5 @@ class Panel(AmisNode):
     """底部容器"""
     affixFooter: Optional[bool] = None
     """是否固定底部容器"""
-    actions: SerializeAsAny[Optional[List["Action"]]] = None
+    actions: SerializeAsAny[Optional[List["AAction"]]] = None
     """按钮区域"""

@@ -3,7 +3,7 @@ from amis.types import AmisNode
 
 
 # https://baidu.github.io/amis/zh-CN/components/pagination#%E5%B1%9E%E6%80%A7%E8%A1%A8
-class Pagination(AmisNode):
+class APagination(AmisNode):
     """
     Pagination 分页组件
     """

@@ -1,8 +1,8 @@
 from typing import Optional
-from amis.data_input import FormItem
+from amis.data_input.form_item import AFormItem
 
 
-class InputCity(FormItem):
+class AInputCity(AFormItem):
     """
     InputCity 城市选择器
 
@@ -13,21 +13,25 @@ class InputCity(FormItem):
 
     type: str = 'input-city'
     """指明为 input-city 组件"""
+
     allowCity: Optional[bool] = None
     """
     - 允许选择城市
     - 默认值：true
     """
+
     allowDistrict: Optional[bool] = None
     """
     允许选择区域
     - 默认值：true
     """
+
     searchable: Optional[bool] = None
     """
     是否出搜索框
     - 默认值：false
     """
+
     extractValue: Optional[bool] = None
     """
     - 如果设置成 false 值格式会变成对象，包含 code、province、city 和 district 文字信息

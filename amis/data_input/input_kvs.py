@@ -1,10 +1,10 @@
 from typing import Optional
 from pydantic import SerializeAsAny
-from amis.data_input import FormItem
+from amis.data_input.form_item import AFormItem
 from amis.types import *
 
 
-class InputKVS(FormItem):
+class AInputKVS(AFormItem):
     """
     InputKVS 键值对象
 
@@ -18,11 +18,15 @@ class InputKVS(FormItem):
 
     type: str = "input-kvs"
     """指明为 input-kvs 组件"""
+
     addButtonText: Optional[str] = None
     """默认的 'New field'，而是 Add 按钮的文本"""
+
     draggable: Optional[bool] = None
+
     """默认 True，是否允许拖拽排序"""
     keyItem: SerializeAsAny[Optional[SchemaNode]] = None
     """key 字段"""
+
     valueItems: SerializeAsAny[Optional[list[SchemaNode]]] = None
     """键的项"""

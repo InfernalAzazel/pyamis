@@ -6,7 +6,7 @@ from amis.types import *
 
 # https://aisuda.bce.baidu.com/amis/zh-CN/components/wrapper#%E5%B1%9E%E6%80%A7%E8%A1%A8
 
-class Wrapper(AmisNode):
+class AWrapper(AmisNode):
     """
     Wrapper 包裹容器
 

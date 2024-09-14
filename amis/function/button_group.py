@@ -1,10 +1,10 @@
 from typing import Optional
 from pydantic import SerializeAsAny
-from amis.function.action import Action
+from amis.function.action import AAction
 from amis.types import *
 
 
-class ButtonGroup(AmisNode):
+class AButtonGroup(AmisNode):
     """
     ButtonGroup 按钮组
 
@@ -35,7 +35,7 @@ class ButtonGroup(AmisNode):
     - 选中按钮样式
     - 默认值：'default'
     """
-    buttons: SerializeAsAny[List[Action]]
+    buttons: SerializeAsAny[List[AAction]]
     """按钮"""
     className: Optional[str] = None
     """外层 Dom 的类名"""

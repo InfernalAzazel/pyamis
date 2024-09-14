@@ -1,10 +1,10 @@
 from typing import Optional
 from pydantic import SerializeAsAny
-from amis.data_input import FormItem
+from amis.data_input.form_item import AFormItem
 from amis.types import *
 
 
-class FieldSet(AmisNode):
+class AFieldSet(AFormItem):
     type: str = 'fieldSet'
     """
     FieldSet 表单项集合
@@ -15,21 +15,30 @@ class FieldSet(AmisNode):
     """
     className: Optional[str] = None
     """CSS 类名"""
+
     headingClassName: Optional[str] = None
     """标题 CSS 类名"""
+
     bodyClassName: Optional[str] = None
     """内容区域 CSS 类名"""
+
     title: SerializeAsAny[Optional[SchemaNode]] = None
     """标题"""
-    body: SerializeAsAny[Optional[FormItem]] = None
+
+    body: SerializeAsAny[Optional[AFormItem]] = None
     """表单项集合"""
+
     mode: Optional[str] = None
     """展示默认，同 Form 中的模式"""
+
     collapsable: Optional[bool] = None
     """是否可折叠"""
+
     collapsed: Optional[bool] = None
     """默认是否折叠"""
+
     collapseTitle: SerializeAsAny[Optional[SchemaNode]] = None
     """收起的标题"""
+
     size: Optional[Literal['xs', 'sm','base', 'md', 'lg']] = None
     """大小"""

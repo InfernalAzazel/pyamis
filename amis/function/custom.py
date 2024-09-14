@@ -2,7 +2,7 @@ from typing import Optional
 from amis.types import *
 
 
-class Custom(AmisNode):
+class ACustom(AmisNode):
     """
     Custom 自定义组件
 

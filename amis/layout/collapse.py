@@ -3,7 +3,7 @@ from pydantic import SerializeAsAny
 from amis.types import *
 
 
-class Collapse(AmisNode):
+class ACollapse(AmisNode):
     """
     Collapse 折叠器
 
@@ -40,5 +40,5 @@ class CollapseGroup(AmisNode):
     """自定义切换图标"""
     expandIconPosition: Literal["left", "right"] = "left"
     """设置图标位置，可选值left | right"""
-    body: SerializeAsAny[Optional[List[Union[Collapse, SchemaNode]]]] = None
+    body: SerializeAsAny[Optional[List[Union[ACollapse, SchemaNode]]]] = None
 

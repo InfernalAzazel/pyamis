@@ -3,7 +3,7 @@ from amis.types import *
 
 
 # https://baidu.github.io/amis/zh-CN/components/container#%E5%B1%9E%E6%80%A7%E8%A1%A8
-class Container(AmisNode):
+class AContainer(AmisNode):
     """
     Container 是一种容器组件，它可以渲染其他 amis 组件。
 

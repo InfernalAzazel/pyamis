@@ -3,7 +3,7 @@ from pydantic import SerializeAsAny
 from amis.types import *
 
 
-class AnchorNav(AmisNode):
+class AAnchorNav(AmisNode):
     """
     AnchorNav 锚点导航
 

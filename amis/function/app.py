@@ -1,14 +1,14 @@
 from pydantic import SerializeAsAny, Field
 
-from amis.data_display.iframe import Iframe
-from amis.layout.page import Page
+from amis.data_display.iframe import AIframe
+from amis.layout.page import APage
 from typing import Optional
 from amis.types import *
 
 
 # https://baidu.github.io/amis/zh-CN/components/app#%E5%B1%9E%E6%80%A7%E8%AF%B4%E6%98%8E
 
-class PageSchema(AmisNode):
+class APageSchema(AmisNode):
     """页面配置"""
 
     label: Optional[str] = None
@@ -17,7 +17,7 @@ class PageSchema(AmisNode):
     """菜单图标，比如：fa fa-file."""
     url: Optional[str] = None
     """页面路由路径，当路由命中该路径时，启用当前页面。当路径不是 / 打头时，会连接父级路径。比如：父级的路径为"""
-    schema_: SerializeAsAny[Union["Page", "Iframe"]] = Field(None, alias="schema")
+    schema_: SerializeAsAny[Union["APage", "AIframe"]] = Field(None, alias="schema")
     """页面的配置，具体配置请前往 Page 页面说明"""
     schemaApi: Optional[API] = None
     """如果想通过接口拉取，请配置。返回路径为 json>data。schema 和 schemaApi 只能二选一"""
@@ -33,11 +33,11 @@ class PageSchema(AmisNode):
     """有些页面可能不想出现在菜单中，可以配置成 false，另外带参数的路由无需配置，直接就是不可见的"""
     className: Optional[str] = None
     """菜单类名"""
-    children: SerializeAsAny[Optional[List["PageSchema"]]] = None
+    children: SerializeAsAny[Optional[List["APageSchema"]]] = None
     """子菜单"""
 
 
-class App(BasePage):
+class AApp(BasePage):
     """
     App 多页应用
 
@@ -63,7 +63,7 @@ class App(BasePage):
     """页面菜单下前面区域"""
     footer: SerializeAsAny[Optional[Template]] = None
     """脚页"""
-    pages: SerializeAsAny[Optional[List[Union[PageSchema, dict]]]] = None
+    pages: SerializeAsAny[Optional[List[Union[APageSchema, dict]]]] = None
     """
     Array<页面配置>具体的页面配置。 通常为数组，
     数组第一层为分组，一般只需要配置 label 集合，如果你不想分组，

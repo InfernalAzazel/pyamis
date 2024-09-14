@@ -1,8 +1,9 @@
-from typing import Optional, Literal, Any, Union
-from amis.data_input import FormItem
+from typing import Optional, Literal, Union
+
+from amis.data_input.form_item import AFormItem
 
 
-class Checkbox(FormItem):
+class ACheckbox(AFormItem):
     """
     Checkbox 勾选框
 
@@ -13,8 +14,10 @@ class Checkbox(FormItem):
 
     type: str = "checkbox"
     """指定为 checkbox 组件"""
+
     option: Optional[str] = None
     """选项说明"""
+
     trueValue: Optional[Union[str, int, bool]] = None
     """
     - 标识真值
@@ -25,6 +28,7 @@ class Checkbox(FormItem):
     - 标识假值
     - 默认值：false
     """
+
     optionType: Optional[Literal['default', 'button']] = None
     """
     - 设置 option 类型

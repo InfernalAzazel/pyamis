@@ -3,7 +3,7 @@ from pydantic import SerializeAsAny
 from amis.types import *
 
 
-class TooltipWrapper(AmisNode):
+class ATooltipWrapper(AmisNode):
     """
     TooltipWrapper 文字提示容器
 

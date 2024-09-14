@@ -2,7 +2,7 @@ from typing import Optional
 from amis.types import *
 
 
-class Code(AmisNode):
+class ACode(AmisNode):
     """
     Code 代码高亮
 
@@ -13,31 +13,39 @@ class Code(AmisNode):
 
     type: str = "code"
     """指定为 code 渲染器"""
+
     className: Optional[str] = None
     """外层 CSS 类名"""
+
     value: Optional[str] = None
     """显示的颜色值"""
+
     name: Optional[str] = None
     """在其他组件中，时，用作变量映射"""
+
     language: Optional[str] = None
     """
     - 所使用的高亮语言
     - 默认值：plaintext
     """
+
     tabSize: Optional[int] = None
     """
     - 默认 tab 大小
     - 默认值：4
     """
+
     editorTheme: Optional[str] = None
     """
     - 主题，还有 'vs-dark'
     - 默认值：'vs'
     """
+
     wordWrap: Optional[bool] = None
     """
     - 是否折行
     - 默认值：true
     """
+
     maxHeight: Optional[Union[str, int]] = None
     """最大高度"""

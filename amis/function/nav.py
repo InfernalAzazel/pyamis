@@ -2,11 +2,11 @@ from typing import Optional
 
 from pydantic import SerializeAsAny
 
-from amis.other import Badge
+from amis.other import ABadge
 from amis.types import *
 
 
-class Nav(AmisNode):
+class ANav(AmisNode):
     """
     Nav 导航
 
@@ -48,7 +48,7 @@ class Nav(AmisNode):
         """链接关系"""
         icon: Optional[str] = None
         """图标"""
-        children: SerializeAsAny[Optional[List['Nav.Link']]] = None
+        children: SerializeAsAny[Optional[List['ANav.Link']]] = None
         """子链接"""
         unfolded: Optional[bool] = None
         """初始是否展开"""
@@ -68,18 +68,18 @@ class Nav(AmisNode):
         """菜单项自定义样式"""
         mode: Optional[Literal['group', 'divider']] = None
         """菜菜单项模式，分组模式、分割线"""
-        overflow: SerializeAsAny[Optional['Nav.Overflow']] = None
+        overflow: SerializeAsAny[Optional['ANav.Overflow']] = None
         """导航项响应式收纳配置"""
 
 
     class NavMatchFunc(AmisNode):
-        link: SerializeAsAny[Optional[List['Nav.Link']]] = None
+        link: SerializeAsAny[Optional[List['ANav.Link']]] = None
         """导航项对象"""
         keyword: Optional[str] = None
         """搜索关键字"""
 
     class SearchConfig(AmisNode):
-        matchFunc: SerializeAsAny[Optional['Nav.NavMatchFunc']] = None
+        matchFunc: SerializeAsAny[Optional['ANav.NavMatchFunc']] = None
         """自定义匹配函数, 默认模糊匹配导航对象中的label, title 和 key 字段"""
         className: Optional[str] = None
         """搜索框外层 CSS 类名"""
@@ -155,7 +155,7 @@ class Nav(AmisNode):
     """仅允许同层级内拖拽"""
     saveOrderApi: Optional[API] = None
     """保存排序的 api"""
-    itemBadge: Optional[Badge] = None
+    itemBadge: Optional[ABadge] = None
     """角标"""
     links: Optional[list] = None
     """链接集合"""

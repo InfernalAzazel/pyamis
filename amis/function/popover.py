@@ -1,9 +1,8 @@
 from typing import Optional, Literal, Union
-
 from amis.types import AmisNode
 
 
-class PopOver(AmisNode):
+class APopOver(AmisNode):
     """
     PopOver 弹出提示
 

@@ -1,9 +1,9 @@
 from typing import Optional
-from amis.data_input import FormItem
+from amis.data_input.form_item import AFormItem
 from amis.types import *
 
 
-class DiffEditor(FormItem):
+class ADiffEditor(AFormItem):
     """
     DiffEditor 对比编辑器
 
@@ -12,7 +12,9 @@ class DiffEditor(FormItem):
 
     type: str = "diff-editor"
     """指明为 diff-editor 组件"""
+
     language: Optional[str] = None
     """编辑器高亮的语言，可选 支持的语言"""
+
     diffValue: Optional[Template] = None
     """左侧值"""

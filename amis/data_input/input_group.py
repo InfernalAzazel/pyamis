@@ -1,9 +1,9 @@
 from typing import Optional
 from pydantic import SerializeAsAny
-from amis.data_input import FormItem
+from amis.data_input.form_item import AFormItem
 from amis.types import *
 
-class InputGroup(AmisNode):
+class AInputGroup(AFormItem):
     """
     Input-Group 输入框组合
 
@@ -30,7 +30,7 @@ class InputGroup(AmisNode):
     className: Optional[str] = None
     """CSS 类名"""
 
-    body: SerializeAsAny[Optional[list[Union[FormItem, AmisNode]]]] = None
+    body: SerializeAsAny[Optional[list[Union[AFormItem, AmisNode]]]] = None
     """表单项集合"""
 
     validationConfig: SerializeAsAny[Optional[ValidationConfig]] = None

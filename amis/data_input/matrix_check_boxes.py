@@ -1,10 +1,10 @@
 from typing import Optional
 from pydantic import SerializeAsAny
-from amis.data_input import FormItem
+from amis.data_input.form_item import AFormItem
 from amis.types import *
 
 
-class MatrixCheckboxes(FormItem):
+class AMatrixCheckboxes(AFormItem):
     """
     MatrixCheckboxes 矩阵
 

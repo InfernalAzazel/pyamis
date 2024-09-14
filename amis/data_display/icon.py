@@ -2,7 +2,7 @@ from typing import Optional
 from amis.types import *
 
 
-class Icon(AmisNode):
+class AIcon(AmisNode):
     """
     Icon 图标
 
@@ -15,9 +15,12 @@ class Icon(AmisNode):
 
     type: str = "icon"
     """指定组件类型"""
+
     className: Optional[str] = None
     """外层 CSS 类名"""
+
     icon: Optional[Template] = None
     """icon 名称，支持 fontawesome v4 或 通过 registerIcon 注册的 icon、或使用 url"""
+
     vendor: Optional[str] = None
     """icon 类型，默认为fa, 表示 fontawesome v4。也支持 iconfont, 如果是 fontawesome v5 以上版本或者其他框架可以设置为空字符串"""

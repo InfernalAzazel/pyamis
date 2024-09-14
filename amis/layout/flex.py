@@ -4,7 +4,7 @@ from amis.types import *
 
 
 # https://aisuda.bce.baidu.com/amis/zh-CN/components/flex#%E5%B1%9E%E6%80%A7%E8%A1%A8
-class Flex(AmisNode):
+class AFlex(AmisNode):
     """
     Flex 布局
 
